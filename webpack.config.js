@@ -1,13 +1,10 @@
 
-//const CopyWebPackPlugin = require("copy-webpack-plugin");
 const path = require("path");
-//const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devMode = process.env.NODE_ENV !== 'production';
-//const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    
+    mode:devMode? 'development' : 'production',
     entry: {
         app: [path.resolve(__dirname, 'src/index.js'),
         path.resolve(__dirname, 'src/index.html'),
