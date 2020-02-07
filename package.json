@@ -1,0 +1,41 @@
+{
+  "name": "tailwind-example",
+  "version": "0.1.0",
+  "description": "A tailwind starter package for rapid design prototyping",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:prod": "NODE_ENV=production webpack --config webpack.config.js",
+    "build:dev": "NODE_ENV=development webpack --config webpack.config.js",
+    "watch": "NODE_ENV=development webpack --config webpack.config.js --watch --progress --hide-modules",
+    "dev": "NODE_ENV=development webpack-dev-server --inline --hide-modules --watch --hot --config=webpack.config.js"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "css",
+    "webpack",
+    "purgecss",
+    "postcss"
+  ],
+  "author": "Derek Cameron",
+  "license": "MIT",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "cssnano": "^4.1.10",
+    "extract-loader": "^4.0.3",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "postcss-loader": "^3.0.0",
+    "raw-loader": "^4.0.0",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "^1.2.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {}
+}
