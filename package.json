@@ -4,11 +4,11 @@
   "description": "A tailwind starter package for rapid design prototyping",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production webpack --config webpack.config.js",
-    "build:prod": "NODE_ENV=production webpack --config webpack.config.js",
-    "build:dev": "NODE_ENV=development webpack --config webpack.config.js",
-    "watch": "NODE_ENV=development webpack --config webpack.config.js --watch --progress --hide-modules",
-    "dev": "NODE_ENV=development webpack-dev-server --inline --hide-modules --watch --hot --config=webpack.config.js"
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
+    "watch": "cross-env NODE_ENV=development webpack --config webpack.config.js --watch --progress --hide-modules",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hide-modules --watch --hot --config=webpack.config.js"
   },
   "keywords": [
     "tailwind",
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.0",
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
     "extract-loader": "^4.0.3",

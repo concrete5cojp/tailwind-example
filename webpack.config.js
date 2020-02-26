@@ -18,9 +18,11 @@ module.exports = {
                   {
                     loader: 'file-loader',
                     options: {
-                        name: "assets/images/[name].[ext]",
+                        name: "[name].[ext]",
+                        outputPath: 'assets/images',
+                        publicPath: '/assets/images',
                         esModule: false,
-                    },
+                    }
                   },
                 ],
               },
@@ -31,9 +33,11 @@ module.exports = {
                         {
                             loader: "file-loader",
                             options: {
-                                name: "assets/css/[name].css",
-                                esModule: false,
-                            },
+                              name: "[name].css",
+                              outputPath: 'assets/css',
+                              publicPath: '/assets/css',
+                              esModule: false,
+                          },
                         },
                         "extract-loader",
                   // Translates CSS into CommonJS
@@ -65,9 +69,11 @@ module.exports = {
                       {
                         loader: "file-loader",
                         options: {
-                            name: "assets/css/[name].css",
-                            esModule: false,
-                        },
+                          name: "[name].css",
+                          outputPath: 'assets/css',
+                          publicPath: '/assets/css',
+                          esModule: false,
+                      },
                     },
                     "extract-loader",
                   // Translates CSS into CommonJS
