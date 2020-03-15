@@ -12,3 +12,4 @@ Alternatively run `npm run watch` which will auto-compile all files whenever cha
 ## Note
 All output files are auto-generated in this version.
 For SCSS files just add `<link href='scss/filename.scss' rel='stylesheet'>` it will be automatically converted and compiled into `<link href='assets/css/filename.css' rel='stylesheet'>`
+Index.js is not required in your html files it is included in them all
