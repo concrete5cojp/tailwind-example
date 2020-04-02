@@ -29,11 +29,23 @@ module.exports = {
       rules: [
         {
           test: /\.m?js$/,
-          exclude: /(node_modules|bower_components|^js\/)/ig,
+          exclude: /(node_modules|bower_components|\/?src\/js\/)/ig,
           use: {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env']
+            }
+          }},
+          {
+            test: /src\/js\/.*\.m?js$/,
+            exclude: /(node_modules|bower_component)/ig,
+            use: {
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]',
+                outputPath: 'assets/js',
+                publicPath: '/assets/js',
+                esModule: false,
             }
           }
         },
