@@ -19,7 +19,7 @@ module.exports = {
     plugins: [
         tailwindcss('./tailwind.config.js'),
         require('autoprefixer'),
-        ...process.env.NODE_ENV === 'production' ? [purgecss, require('cssnano')({
+        ...process.env.NODE_ENV === 'production' ? [purgecss,require('cssnano')({
             preset: ['default', { discardComments: { removeAll: true } }],
         }),] : [],
     ]

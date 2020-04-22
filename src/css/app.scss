@@ -1,6 +1,10 @@
-/* purgecss start ignore */
+/*! purgecss start ignore */
 @tailwind base;
 @tailwind components;
-/* purgecss end ignore */
+/*! purgecss end ignore */
+
+/* only include if your doing concrete5 designs small 
+fixes from preflight that affects concrete5 */
+@import './c5-fixes';
 
 @tailwind utilities;
