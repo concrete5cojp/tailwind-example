@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 13.x]
+        node-version: [10.x, 12.x, 14.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install on ${{ matrix.node-version }}
-        run: npm ci
+        run: npm install -D
       - name: Normal Build ${{ matrix.node-version }}
         run: npm run build
       - name: Build for C5 ${{ matrix.node-version }}
