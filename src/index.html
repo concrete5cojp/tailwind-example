@@ -1,45 +1,73 @@
+<!---C5 Begin header-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>TailwindCSS Example</title>
-    <link href="css/app.scss" rel="stylesheet">
-</head>
-<body class="bg-gray-200">
+    <link href="css/app.scss" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-200 bg-transparent">
+    <!---C5 End header-->
+    <!---C5 Begin headertest-->
+    <c5-area name="asdasdasdas"></c5-area>
     <header class="w-full">
-        <nav class="flex items-center justify-between flex-wrap bg-blue-200 p-6 w-full">
-            <div class="flex items-center flex-shrink-0 text-gray-700 mr-6">
-              <img src="img/concrete5_Logo.png" class="w-8 mr-4">
-              <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
-            </div>
-            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-              <div class="text-sm lg:flex-grow">
-                <a href="https://tailwindcss.com/docs/utility-first" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:underline mr-4">
-                  Docs
-                </a>
-                <a href="https://tailwindcss.com/screencasts/" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:underline mr-4">
-                  Screencasts
-                </a>
-                <a href="https://concrete5.co.jp" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:underline">
-                  concrete5 Japan
-                </a>
-              </div>
-              <div>
-                <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-gray-700 border-gray-700 hover:border-transparent hover:text-white hover:bg-gray-700 transition duration-500 ease-in-out mt-4 lg:mt-0">Download</a>
-              </div>
-            </div>
-          </nav>
-        </header>
-        <main class="bg-gray-50 text-gray-700 p-6 mx-auto">
-            Hello and welcome to this tailwind example compiled with webpack<br />
-            This file is automatically updating index.html when using watch.<br />
-            This file in the dist folder (dist/index.html) is not updated while using npm run dev<br />
-            But it will update on your screen or not....<br />
-            Guess you have to run it to find out!
-        </main>
-        <!-- Index.js will be auto injected -->
-        <script src="js/hello.js" type="text/javascript"></script>
-</body>
+      <nav
+        class="flex items-center justify-between flex-wrap bg-blue-200 p-6 w-full"
+      >
+        <div class="flex items-center flex-shrink-0 text-gray-700 mr-6">
+          <img src="img/concrete5_Logo.png" class="w-8 mr-4" />
+          <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
+        </div>
+        <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+          <div class="text-sm lg:flex-grow">
+            <a
+              href="https://tailwindcss.com/docs/utility-first"
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:underline mr-4"
+            >
+              Docs
+            </a>
+            <a
+              href="https://tailwindcss.com/screencasts/"
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:underline mr-4"
+            >
+              Screencasts
+            </a>
+            <a
+              href="https://concrete5.co.jp"
+              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:underline"
+            >
+              concrete5 Japan
+            </a>
+          </div>
+          <div>
+            <a
+              href="#"
+              class="inline-block text-sm px-4 py-2 leading-none border rounded text-gray-700 border-gray-700 hover:border-transparent hover:text-white hover:bg-gray-700 transition duration-500 ease-in-out mt-4 lg:mt-0"
+              >Download</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!---C5 End headertest-->
+    <!---C5 Begin headertest2-->
+
+    <main class="bg-gray-50 text-gray-700 p-6 mx-auto">
+      Hello and welcome to this tailwind example compiled with webpack<br />
+      This file is automatically updating index.html when using watch.<br />
+      This file in the dist folder (dist/index.html) is not updated while using
+      npm run dev<br />
+      But it will update on your screen or not....<br />
+      Guess you have to run it to find out!
+      <c5-area name="global area" global="true" editable="false"></c5-area>
+    </main>
+    <!---C5 End headertest2-->
+    <c5-area name="grid" grid="true"></c5-area>
+    <!---C5 Begin Element footer-->
+    <!-- Index.js will be auto injected -->
+    <script src="js/hello.js" type="text/javascript"></script>
+  </body>
 </html>
+<!---C5 End Element footer-->
