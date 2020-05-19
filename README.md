@@ -1,4 +1,4 @@
-![Tests](https://github.com/deek87/html-webpack-c5-theme-plugin/workflows/Build%20and%20Test/badge.svg?branch=master)
+![Build](https://github.com/concrete5cojp/tailwind-example/workflows/Build/badge.svg)
 
 # TailwindCSS webpack/HTML for concrete5
 
