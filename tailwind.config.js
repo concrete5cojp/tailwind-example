@@ -9,6 +9,10 @@ module.exports = {
     ],
     mode: "all",
   },
+  plugins: [
+    require('@tailwindcss/ui'), // use tailwindui
+    require('@tailwindcss/typography') // use typography
+  ],
   // This is to disable the opacity that genereates a lot of extra css classes
   corePlugins: {
     divideOpacity: false,

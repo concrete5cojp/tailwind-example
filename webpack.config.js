@@ -29,9 +29,7 @@ function getTemplates(files, env) {
     );
   });
   if (env && env.c5) {
-    paths.push(
-      new HtmlWebpackC5ThemePlugin({ deleteHtml: true }, HtmlWebpackPlugin)
-    );
+    paths.push(new HtmlWebpackC5ThemePlugin({ ...c5Options, deleteHtml: true }, HtmlWebpackPlugin));
   }
   return paths;
 }
@@ -52,10 +50,7 @@ module.exports = (env) => {
     },
     output: {
       filename: "assets/js/[name].js",
-      path:
-        env && env.c5
-          ? __dirname + "/dist/" + c5Options.themeHandle.trim("/")
-          : __dirname + "/dist",
+      path: env && env.c5 ? __dirname + "/dist/" + c5Options.themeHandle.trim("/") : __dirname + "/dist",
       publicPath: outputPath + "/",
     },
 
@@ -181,8 +176,6 @@ module.exports = (env) => {
       openPage: "index.html",
       watchContentBase: true,
     },
-    plugins: !devMode
-      ? [new CleanWebpackPlugin(), ...getTemplates(htmlFiles, env)]
-      : getTemplates(htmlFiles),
+    plugins: !devMode ? [new CleanWebpackPlugin(), ...getTemplates(htmlFiles, env)] : getTemplates(htmlFiles),
   };
 };

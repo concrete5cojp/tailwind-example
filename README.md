@@ -4,6 +4,10 @@
 
 This repository is for webpack/html tailwind starter repo for concrete5 theme development
 
+## Updates
+
+Now Includes @tailwind/ui and @tailwind/typhography
+
 ## To build
 
 Just run `npm run build` and the dist directory contains all of the relevant HTML/CSS
