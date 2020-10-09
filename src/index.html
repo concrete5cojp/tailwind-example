@@ -13,9 +13,7 @@
     <!---C5 Begin headertest-->
     <c5-area name="asdasdasdas"></c5-area>
     <header class="w-full">
-      <nav
-        class="flex items-center justify-between flex-wrap bg-blue-200 p-6 w-full"
-      >
+      <nav class="flex items-center justify-between flex-wrap bg-blue-200 p-6 w-full">
         <div class="flex items-center flex-shrink-0 text-gray-700 mr-6">
           <img src="img/concrete5_Logo.png" class="w-8 mr-4" />
           <span class="font-semibold text-xl tracking-tight">Tailwind CSS</span>
@@ -34,10 +32,7 @@
             >
               Screencasts
             </a>
-            <a
-              href="https://concrete5.co.jp"
-              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:underline"
-            >
+            <a href="https://concrete5.co.jp" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:underline">
               concrete5 Japan
             </a>
           </div>
@@ -57,17 +52,20 @@
     <main class="bg-gray-50 text-gray-700 p-6 mx-auto">
       Hello and welcome to this tailwind example compiled with webpack<br />
       This file is automatically updating index.html when using watch.<br />
-      This file in the dist folder (dist/index.html) is not updated while using
-      npm run dev<br />
+      This file in the dist folder (dist/index.html) is not updated while using npm run dev<br />
       But it will update on your screen or not....<br />
       Guess you have to run it to find out!
-      <c5-area name="global area" global="true" editable="false"></c5-area>
+      <c5-area name="global area" global="true" editable="false">
+        <p class="text-blue-500">blue text 500</p>
+        <p class="text-red-500">red text 500</p>
+        <p class="text-yellow-500">yellow text 500</p>
+      </c5-area>
     </main>
     <!---C5 End headertest2-->
     <c5-area name="grid" grid="true"></c5-area>
-    <!---C5 Begin Element footer-->
+    <!---C5 Begin element footer-->
     <!-- Index.js will be auto injected -->
     <script src="js/hello.js" type="text/javascript"></script>
   </body>
 </html>
-<!---C5 End Element footer-->
+<!---C5 End element footer-->

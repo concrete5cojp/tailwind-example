@@ -43,7 +43,7 @@
     "raw-loader": "^4.0.1",
     "sass": "^1.26.10",
     "sass-loader": "^8.0.2",
-    "tailwindcss": "^1.7.1",
+    "tailwindcss": "^1.8.12",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
