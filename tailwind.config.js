@@ -1,6 +1,10 @@
 //const { colors } = require('tailwindcss/defaultTheme') // import default colours
 module.exports = {
   purge: {
+    future: {
+      purgeLayersByDefault: true,
+      removeDeprecatedGapUtilities: true,
+    },
     content: [
       "./src/**/*.html",
       "./src/**/*.vue",
@@ -8,10 +12,13 @@ module.exports = {
       // etc.
     ],
     mode: "all",
+    //layers: ["utilities"],
   },
   plugins: [
-    require('@tailwindcss/ui'), // use tailwindui
-    require('@tailwindcss/typography') // use typography
+    /**
+    require("@tailwindcss/ui"), // use tailwindui
+    require("@tailwindcss/typography"), // use typography
+     */
   ],
   // This is to disable the opacity that genereates a lot of extra css classes
   corePlugins: {
