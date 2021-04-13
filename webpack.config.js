@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const { HtmlWebpackC5ThemePlugin } = require("html-webpack-c5-theme-plugin");
+const { web } = require("webpack");
 const c5Options = {
   themeHandle: "c5j_theme", // The handle of the theme used for generating assets/theme paths.
   packageHandle: null, // set to null unless you want to add theme to a package
@@ -44,6 +45,7 @@ module.exports = (env) => {
   }
 
   return {
+    target: 'web',
     mode: devMode ? "development" : "production",
     entry: {
       app: [path.resolve(__dirname, "src/index.js")],
@@ -52,6 +54,7 @@ module.exports = (env) => {
       filename: "assets/js/[name].js",
       path: env && env.c5 ? __dirname + "/dist/" + c5Options.themeHandle.trim("/") : __dirname + "/dist",
       publicPath: outputPath + "/",
+      clean: true,
     },
 
     module: {
@@ -77,6 +80,7 @@ module.exports = (env) => {
               esModule: false,
             },
           },
+          type: 'javascript/auto',
         },
         {
           test: /\.html$/i,
@@ -84,28 +88,29 @@ module.exports = (env) => {
             {
               loader: "html-loader",
               options: {
-                attrs: [
-                  "script:src",
-                  "link:href",
-                  ":srcset",
-                  "img:data-src",
-                  "img:src",
-                  "audio:src",
-                  "video:src",
-                  "track:src",
-                  "embed:src",
-                  "source:src",
-                  "input:src",
-                  "object:data",
-                ],
+                sources: {
+                  list: [
+                    '...',
+                    {
+                      tag: 'img',
+                      attribute: 'data-src',
+                      type: 'src',
+                    },
+                    {
+                      tag: 'img',
+                      attribute: 'data-srcset',
+                      type: 'srcset',
+                    },
+                  ]
+                },
                 minimize: {
-                  collapseWhitespace: true,
+                  collapseWhitespace: false,
                   conservativeCollapse: true,
                   keepClosingSlash: true,
                   minifyCSS: true,
                   minifyJS: true,
                   removeAttributeQuotes: true,
-                  removeComments: true,
+                  removeComments: !env.c5,
                   removeScriptTypeAttributes: true,
                   removeStyleLinkTypeAttributes: true,
                   useShortDoctype: true,
@@ -116,6 +121,8 @@ module.exports = (env) => {
         },
         {
           test: /\.(png|jpe?g|gif|svg|webp)$/i,
+
+          type: 'javascript/auto',
           use: [
             {
               loader: "file-loader",
@@ -149,6 +156,7 @@ module.exports = (env) => {
               },
             },
           ],
+          type: 'javascript/auto'
         },
         {
           test: /\.css$/i,
@@ -175,6 +183,7 @@ module.exports = (env) => {
       overlay: true,
       openPage: "index.html",
       watchContentBase: true,
+      hot: true
     },
     plugins: !devMode ? [new CleanWebpackPlugin(), ...getTemplates(htmlFiles, env)] : getTemplates(htmlFiles),
   };

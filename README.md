@@ -6,7 +6,9 @@ This repository is for webpack/html tailwind starter repo for concrete5 theme de
 
 ## Updates
 
-Now Includes @tailwind/ui and @tailwind/typhography
+- Now updated to version 2.1 of tailwind (using JIT)
+- Updated to webpack 5
+- Now Includes @tailwind/forms and @tailwind/typhography (remove @tailwind/ui)
 
 ## To build
 

@@ -1,5 +1,6 @@
 //const { colors } = require('tailwindcss/defaultTheme') // import default colours
 module.exports = {
+  mode: 'jit',
   purge: {
     future: {
       purgeLayersByDefault: true,
@@ -16,7 +17,7 @@ module.exports = {
   },
   plugins: [
     /**
-    require("@tailwindcss/ui"), // use tailwindui
+    require("@tailwindcss/forms"), // use forms
     require("@tailwindcss/typography"), // use typography
      */
   ],
@@ -38,11 +39,11 @@ module.exports = {
         */
     extend: {
       /** This will extend the current "spacing" configuration
-            *  and add a -7 to all spacing options     
-            spacing: {
-                '7': '1.75rem',
-            },
-             */
+            *  and add a -7 to all spacing options     */
+      spacing: {
+        'derek': '2rem',
+      },
+
     },
   },
 };
