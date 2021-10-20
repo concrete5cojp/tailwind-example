@@ -177,12 +177,25 @@ module.exports = (env) => {
       ],
     },
     devServer: {
-      contentBase: path.join(__dirname, "src"),
       compress: true,
-      open: true,
-      overlay: true,
-      openPage: "index.html",
-      watchContentBase: true,
+      open: {
+        target: ["index.html"],
+      },
+      client: {
+        logging: "info",
+        // Can be used only for `errors`/`warnings`
+        //
+        // overlay: {
+        //   errors: true,
+        //   warnings: true,
+        // }
+        overlay: true,
+        progress: true,
+      },
+      static: {
+        watch: true,
+        directory: path.join(__dirname, "src"),
+      },
       hot: true
     },
     plugins: !devMode ? [new CleanWebpackPlugin(), ...getTemplates(htmlFiles, env)] : getTemplates(htmlFiles),
