@@ -14,7 +14,7 @@
     "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js",
     "build:c5": "cross-env NODE_ENV=production webpack --config webpack.config.js --env c5",
     "watch": "cross-env NODE_ENV=development webpack --config webpack.config.js --watch --progress",
-    "dev": "cross-env NODE_ENV=development webpack serve  --config=webpack.config.js --hot --inline"
+    "dev": "cross-env NODE_ENV=development webpack serve  --config=webpack.config.js --hot"
   },
   "keywords": [
     "tailwind",
@@ -30,27 +30,28 @@
     "@babel/compat-data": "^7.11.0",
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
-    "@tailwindcss/forms": "^0.3.2",
-    "@tailwindcss/typography": "^0.2.0",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.1",
-    "cssnano": "^5.0.0",
+    "cssnano": "^5.0.8",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-c5-theme-plugin": "^0.0.18",
     "html-webpack-plugin": "^5.3.1",
-    "postcss": "^8.2.10",
+    "postcss": "^8.3.5",
     "postcss-loader": "^5.2.0",
     "raw-loader": "^4.0.2",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
-    "tailwindcss": "^2.1.2",
-    "webpack": "^5.32.0",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
+    "tailwindcss": "^2.2.17",
+    "webpack": "^5.59.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
   }
 }
