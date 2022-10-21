@@ -28,9 +28,9 @@ jobs:
       - name: Normal Build ${{ matrix.node-version }}
         run: npm run build
         env:
-          NODE_OPTIONS: --openssl-legacy-provider
+          NODE_OPTIONS: ${{ matrix.node-version == '18.x' ? "--openssl-legacy-provider" :""}}
       - name: Build for C5 ${{ matrix.node-version }}
         run: npm run build:c5
         env:
-          NODE_OPTIONS: --openssl-legacy-provider
+          NODE_OPTIONS: ${{ matrix.node-version == '18.x' ? "--openssl-legacy-provider" :""}}
           CI: true
