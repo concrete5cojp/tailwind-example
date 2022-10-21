@@ -1,6 +1,6 @@
 ![Build](https://github.com/concrete5cojp/tailwind-example/workflows/Build/badge.svg)
 
-# TailwindCSS webpack/HTML for concrete5
+# TailwindCSS webpack/HTML for concreteCMS
 
 This repository is for webpack/html tailwind starter repo for concrete5 theme development
 
@@ -15,7 +15,7 @@ This repository is for webpack/html tailwind starter repo for concrete5 theme de
 Just run `npm run build` and the dist directory contains all of the relevant HTML/CSS
 You can also use `npm run build:dev` to build development assets however the file sizes are large
 
-## To build for concrete5
+## To build for concreteCMS
 
 Just run `npm run build:c5` and the dist/theme_name directory contains all of the relevant php/css/js
 

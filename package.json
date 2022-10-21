@@ -1,7 +1,7 @@
 {
   "name": "tailwind-example",
-  "version": "0.3.0",
-  "description": "A tailwind starter package for rapid design prototyping for concrete5",
+  "version": "0.3.1",
+  "description": "A tailwind starter package for rapid design prototyping for concretecms",
   "repository": {
     "type": "git",
     "url": ""
