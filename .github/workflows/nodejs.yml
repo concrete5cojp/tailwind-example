@@ -27,14 +27,16 @@ jobs:
         run: npm install -D
       - name: Normal Build ${{ matrix.node-version }}
         run: npm run build
+      - name: Normal Build v18+
+        run: npm run build
+        if: ${{ matrix.node-version == '18.x' }}
         env:
-          if: ${{ matrix.node-version == '18.x' }}
           NODE_OPTIONS:  "--openssl-legacy-provider"
       - name: Build for C5 ${{ matrix.node-version }}
         run: npm run build:c5
         env:
           CI: true
-      - name: Build for C5 ${{ matrix.node-version }}
+      - name: Build for C5 v18+
         if: ${{ matrix.node-version == '18.x' }}
         run: npm run build:c5
         env:
